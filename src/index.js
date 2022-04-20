@@ -1,10 +1,9 @@
-const apiBase = 'https://weatherdbi.herokuapp.com/data/weather/' //the location is a reformat of {location}
-
+const apiBase = 'https://weatherdbi.herokuapp.com/data/weather/chicago' 
 function bootPage(){
-    fetch(apiBase + location)
-    .then(response => response.json)
-    .then((data) => console.log(data))
+ 
+  fetch(apiBase)
+  .then(response => response.json())
+  .then(data => console.log(data))
 }
-
 
 document.addEventListener('DOMContentLoaded', bootPage)
